@@ -2,7 +2,14 @@
 
 ## 1. Requirements
 
-The following Python packages and their dependencies are required for this analysis: numpy (version 1.21.0) for numerical operations, tensorflow (version 2.7.0) and keras (version 2.7.0) for building and loading deep learning models, matplotlib (version 3.5.1) for data visualization, pandas (version 1.3.4) for data manipulation, pyreadr (version 0.4.0) for reading R data files, scikit-learn (version 1.0.1) for machine learning utilities, and joblib (version 1.1.0) for model saving and loading. Additionally, the R package Seurat is recommended for normalizing input data, particularly if you are working with single-cell RNA sequencing datasets.
+The following Python/R packages and their dependencies are required for this analysis: 
+  - numpy (version >= 2.2.4, < 3) for numerical operations
+  - tensorflow (version >= 2.18.0, < 3) and keras (version 2.7.0) for building and loading deep learning models
+  - matplotlib (version >= 3.10.1, < 4) for data visualization, pandas (version 1.3.4) for data manipulation
+  - pyreadr (version >= 0.5.3, < 0.6) for reading R data files
+  - scikit-learn (version >= 1.6.1, < 2) for machine learning utilitie
+  - joblib (version >= 1.4.2, < 2) for model saving and loading
+  - Seurat (version 4.3.0) and SeuratObject (version 4.1.3) are recommended for normalizing input data, particularly if you are working with single-cell RNA sequencing datasets
 
 All required files, as well as an example input dataset are provided with the appendix
 
