@@ -39,10 +39,10 @@ First, ensure the correct input objects are uncommented relative to your dataset
 
 The function generates 500 predictions (with dropout) per cell for determining confidence scores. These are calculated for all cells simultenously to maximize parallelization in GPU-equipped machines. But it can also require significant amount of RAM for larger datasets. If this is an issue, you can use the alternative function provided below, which will be slower but should reduce the maximum RAM required five-fold.
 
-This script can also be ran using the pixi.toml file, which makes recreating the Python environment easier: \n
-      * ml pixi \n
-      * git clone https://github.com/ktreese03/single_cell_classifier \n
-      * cd single_cell_classifer \n
-      * pixi install \n 
-      * Rscript PrepareInput.R (if necessary) \n
-      * pixi run python Predict.py \n
+This script can also be ran using the pixi.toml file, which makes recreating the Python environment easier: \
+      * ml pixi \
+      * git clone https://github.com/ktreese03/single_cell_classifier \
+      * cd single_cell_classifer \
+      * pixi install \
+      * Rscript PrepareInput.R (if necessary) \
+      * pixi run python Predict.py \
