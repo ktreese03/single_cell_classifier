@@ -45,4 +45,4 @@ This script can also be ran using the pixi.toml file, which makes recreating the
       * cd single_cell_classifer \
       * pixi install \
       * Rscript PrepareInput.R (if necessary) \
-      * pixi run python Predict.py \
+      * pixi run python Predict.py
