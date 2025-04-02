@@ -28,12 +28,12 @@ For P40, P50 and P70 stages, use P48.
 For late pupal stages (after P70) use Adult.
 
 
-### Classifying your Drosophila optic lobe dataset
-## Step 1. Preparation of the input: PrepareInput.R
+## Classifying your Drosophila optic lobe dataset
+### Step 1. Preparation of the input: PrepareInput.R
 
 Because the classification script (Predict.py) requires a subsetted, log-normalized expression matrix, we've provided the PrepareInput.R script that can be ran on a Seurat object by simply loading the correct stage-specific markers and your dataset. It is included in the script to ensure the gene names in the marker list and your dataset match, as this is necessary for our model. **Do NOT modify the order of the marker genes**. If a marker gene is not captured in your dataset, it's also included in the script to add the marker gene to the generated expression file and pad it with zeroes.
 
-## Step 2. Classification: Predict.py
+### Step 2. Classification: Predict.py
 
 First, ensure the correct input objects are uncommented relative to your dataset. This script is designed to load a matrix saved in .rds format, as outputted from PrepareInput.R. However, you can load your input dataset in any way you like (if you're not loading an R file, you don't need the pyreadr package), as long as the dataset structure matches expected input. As explained, be sure it's log-normalized in the same way and the columns (input features) are in the exact same order as in the provided marker files provided. This script will then classify your data, determine confidence scores and save them in .txt files. The .txt file will contain two columns, in the first one labelled "Cluster" you will have the cluster identity you are predicting and in the second column, named "Confidence", you will have the confidence score with which the cluster has been predicted. **The rows are labeled, but the order will match the order of cells you provided**. Please refer to Table S1 for correspondances of the predicted cluster numbers to cell types.
 
