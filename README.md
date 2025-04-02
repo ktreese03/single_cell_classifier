@@ -7,7 +7,7 @@ The following Python/R packages and their dependencies are required for this ana
   - keras (version >= 3.9.0, < 4) for building and loading deep learning models
   - matplotlib (version >= 3.10.1, < 4) for data visualization, pandas (version 1.3.4) for data manipulation.
   - pyreadr (version >= 0.5.3, < 0.6) for reading R data files.
-  - scikit-learn (version 1.5.0.*) for machine learning utilities.
+  - scikit-learn (version 1.5.0) for machine learning utilities.
   - joblib (version >= 1.4.2, < 2) for model saving and loading.
   - pandas (version >= 2.2.3, < 3)
   - Seurat (version 4.3.0) and SeuratObject (version 4.1.3) are recommended for normalizing input data, particularly if you are working with single-cell RNA sequencing datasets.
