@@ -38,3 +38,11 @@ Because the classification script (Predict.py) requires a subsetted, log-normali
 First, ensure the correct input objects are uncommented relative to your dataset. This script is designed to load a matrix saved in .rds format, as outputted from PrepareInput.R. However, you can load your input dataset in any way you like (if you're not loading an R file, you don't need the pyreadr package), as long as the dataset structure matches expected input. As explained, be sure it's log-normalized in the same way and the columns (input features) are in the exact same order as in the provided marker files provided. This script will then classify your data, determine confidence scores and save them in .txt files. The .txt file will contain two columns, in the first one labelled "Cluster" you will have the cluster identity you are predicting and in the second column, named "Confidence", you will have the confidence score with which the cluster has been predicted. **The rows are labeled, but the order will match the order of cells you provided**. Please refer to Table S1 for correspondances of the predicted cluster numbers to cell types.
 
 The function generates 500 predictions (with dropout) per cell for determining confidence scores. These are calculated for all cells simultenously to maximize parallelization in GPU-equipped machines. But it can also require significant amount of RAM for larger datasets. If this is an issue, you can use the alternative function provided below, which will be slower but should reduce the maximum RAM required five-fold.
+
+This script can also be ran using the pixi.toml file, which makes recreating the Python environment easier:
+      * ml pixi
+      * git clone https://github.com/ktreese03/single_cell_classifier
+      * cd single_cell_classifer
+      * pixi install 
+      * Rscript PrepareInput.R (if necessary)
+      * pixi run python Predict.py
